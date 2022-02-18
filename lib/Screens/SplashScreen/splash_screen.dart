@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'dart:async';
 import 'package:my_lang/Screens/HomeScreen/home_screen.dart';
+import 'package:my_lang/components/logo_components.dart';
 import 'package:my_lang/constant.dart';
 
 class SplashScreenPage extends StatefulWidget {
@@ -35,22 +35,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
     return Scaffold(
       backgroundColor: kPrimaryColor,
       body: Center(
-        child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              SvgPicture.asset(
-                  "assets/icons/logo.svg",
-                  height: size.height * 0.15
-              ),
-              SizedBox(height: size.height * 0.03),
-              const Text(
-                "My Lang",
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 30),
-              ),
-            ]),
+        child: LogoComponents(size: size),
       ),
     );
   }
