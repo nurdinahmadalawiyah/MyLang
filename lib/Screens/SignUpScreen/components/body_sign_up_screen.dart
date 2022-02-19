@@ -39,6 +39,15 @@ class BodySingUpScreen extends StatelessWidget {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
+                        Container(
+                          height: 6,
+                          width: 60,
+                          decoration: BoxDecoration(
+                              color: kGreyColor,
+                            borderRadius: BorderRadius.circular(10)
+                          ),
+                        ),
+                        SizedBox(height: size.height * 0.02),
                         const Text(
                           "SIGN UP",
                           style: TextStyle(
