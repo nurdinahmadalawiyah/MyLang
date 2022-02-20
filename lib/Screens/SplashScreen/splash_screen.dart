@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'dart:async';
-import 'package:my_lang/Screens/HomeScreen/home_screen.dart';
 import 'package:my_lang/Screens/SignUpScreen/sign_up.dart';
 import 'package:my_lang/components/logo_components.dart';
 import 'package:my_lang/constant.dart';

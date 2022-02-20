@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:my_lang/Screens/SignInScreen/sign_in.dart';
-import 'package:my_lang/Screens/SignUpScreen/components/social_icon.dart';
+import 'package:my_lang/Screens/HomeScreen/home_screen.dart';
+import 'package:my_lang/Screens/SignUpScreen/sign_up.dart';
 import 'package:my_lang/components/account_check.dart';
 import 'package:my_lang/components/logo_components.dart';
 import 'package:my_lang/components/rounded_button.dart';
@@ -8,8 +8,8 @@ import 'package:my_lang/components/rounded_input_field.dart';
 import 'package:my_lang/components/rounded_password_field.dart';
 import 'package:my_lang/constant.dart';
 
-class BodySignUpScreen extends StatelessWidget {
-  const BodySignUpScreen({
+class BodySignInScreen extends StatelessWidget {
+  const BodySignInScreen({
     Key? key,
     required this.size,
   }) : super(key: key);
@@ -27,8 +27,9 @@ class BodySignUpScreen extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(vertical: 30),
                 child: LogoComponents(size: size),
               ),
+              SizedBox(height: size.height * 0.07),
               Container(
-                  height: 600,
+                  height: 450,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.white,
@@ -48,7 +49,7 @@ class BodySignUpScreen extends StatelessWidget {
                         ),
                         SizedBox(height: size.height * 0.02),
                         const Text(
-                          "SIGN UP",
+                          "SIGN IN",
                           style: TextStyle(
                               fontWeight: FontWeight.bold,
                               fontSize: 30,
@@ -56,7 +57,7 @@ class BodySignUpScreen extends StatelessWidget {
                         ),
                         SizedBox(height: size.height * 0.01),
                         const Text(
-                          "Create your Account",
+                          "Login to your Account",
                           style: TextStyle(
                               fontWeight: FontWeight.w300,
                               fontSize: 25,
@@ -71,48 +72,36 @@ class BodySignUpScreen extends StatelessWidget {
                           onChanged: (value) {},
                           hintext: 'Password',
                         ),
-                        RoundedPasswordField(
-                          hintext: "Confirm Password",
-                          onChanged: (value) {},
-                        ),
-                        RoundedButton(
-                          text: "SIGN UP",
-                          press: () {},
-                        ),
                         const Text(
-                          "Or sign up with",
+                          "Forgot Password ?",
                           style: TextStyle(
                             fontWeight: FontWeight.normal,
                             color: Colors.black,
                           ),
                         ),
                         SizedBox(height: size.height * 0.02),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: <Widget>[
-                            SocialIcon(
-                              iconSrc: "assets/icons/google.svg",
-                              press: () {},
-                            ),
-                            SocialIcon(
-                              iconSrc: "assets/icons/facebook-icon.svg",
-                              press: () {},
-                            ),
-                            SocialIcon(
-                              iconSrc: "assets/icons/twitter.svg",
-                              press: () {},
-                            ),
-                          ],
-                        ),
-                        SizedBox(height: size.height * 0.02),
-                        AccountCheck(
-                          login: false,
+                        RoundedButton(
+                          text: "SIGN IN",
                           press: () {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return const SignInScreen();
+                                  return const HomePage();
+                                },
+                              ),
+                            );
+                          },
+                        ),
+                        SizedBox(height: size.height * 0.01),
+                        AccountCheck(
+                          login: true,
+                          press: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return const SignUpScreen();
                                 },
                               ),
                             );
