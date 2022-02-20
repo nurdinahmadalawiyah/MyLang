@@ -28,7 +28,7 @@ class BodySingUpScreen extends StatelessWidget {
                 child: LogoComponents(size: size),
               ),
               Container(
-                  height: 600,
+                  height: double.infinity,
                   width: double.infinity,
                   decoration: BoxDecoration(
                     color: Colors.white,

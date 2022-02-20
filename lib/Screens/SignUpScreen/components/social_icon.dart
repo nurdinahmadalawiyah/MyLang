@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:my_lang/constant.dart';
 
 class SocialIcon extends StatelessWidget {
   final String iconSrc;
@@ -19,10 +18,14 @@ class SocialIcon extends StatelessWidget {
           margin: const EdgeInsets.symmetric(horizontal: 10),
           padding: const EdgeInsets.all(5),
           decoration: BoxDecoration(
-              border: Border.all(
-                width: 2,
-                color: kPrimaryLightColor,
-              ),
+            color: Colors.white,
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.grey.withOpacity(0.5),
+                  blurRadius: 8,
+                  offset: const Offset(6, 3), // Shadow position
+                ),
+              ],
               shape: BoxShape.circle),
           child: SvgPicture.asset(
             iconSrc,
